@@ -147,7 +147,10 @@ const createPlaylistAsideCard = (itemID, item, song = false, src = './svgs/playl
     let card = document.createElement('article');
     card.className = 'playlistCardAside';
     let img = document.createElement('img');
-    img.className = 'songPlaylist icon invert';
+    img.className = 'songPlaylist icon';
+    img.style.background = 'white';
+    img.style.borderRadius = '4px';
+    img.style.padding = '4px';
     img.src = src;
     img.alt = alt;
     let span = document.createElement('span');
