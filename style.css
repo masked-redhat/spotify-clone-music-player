@@ -391,7 +391,14 @@ input[type="checkbox"] {
         background: black;
         left: -100%;
         width: 100%;
+        height: calc(100vh - 2 * var(--gap-1));
         z-index: 3;
+    }
+
+    #application>section{
+        position: relative;
+        margin-right: var(--gap-1);
+        left: var(--gap-1);
     }
 
     #nowPlayingImg {
