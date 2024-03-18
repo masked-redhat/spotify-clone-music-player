@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clone for Spotify">
+    <title>Spotify - Web Player: Music for Everyone</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body class="flex column">
+
+    <section id="application" class="flex h-full gap-1 m-1">
+        <header class="aside flex column gap-1">
+            <nav class="p-1 br-1 bg-gray flex column content-center gap-2">
+                <img src="./svgs/logo.svg" alt="spotify" class="logo invert">
+                <ul class="flex column gap-1">
+                    <li class="flex br-1 items-center gap-1 p-1"><img src="./svgs/home.svg" alt="home"
+                            class="invert">Home</li>
+                    <li class="flex br-1 items-center gap-1 p-1"><img src="./svgs/search.svg" alt="search"
+                            class="invert">search</li>
+                </ul>
+            </nav>
+            <aside class="p-2 h-full br-1 bg-gray">
+                <header class="flex gap-1 w-full items-center content-center">
+                    <img src="./svgs/library.svg" alt="playlist" class="icon invert">
+                    <h3 style="font-size: 0.98rem;margin: auto;">Your Library</h3>
+                    <button title="Create new Playlist"><img src="./svgs/plus.svg" alt="create playlist"
+                            class="icon invert" id="createPlaylist"></button>
+                </header>
+                <section id="songsPlaylist" class="w-full flex column gap-1">
+                </section>
+            </aside>
+        </header>
+        <section class="flex column w-full br-1 o-hidden bg-gray">
+            <header class="mainHeader p-1 flex items-center">
+                <ul class="flex gap-2">
+                    <li class="p-1 br-1" id="allSongs">all songs</li>
+                    <li class="p-1 br-1" id="playList">playlist</li>
+                </ul>
+            </header>
+            <main class="p-side-1 flex f-wrap gap-1" id="cardContainer">
+            </main>
+        </section>
+    </section>
+    <section id="playbar" class="flex items-center">
+
+        <div class="image flex items-center content-center">
+            <img id="nowPlayingImg" src="./svgs/song.svg" alt="song">
+        </div>
+        <div class="flex column w-full">
+            <div class="flex gap-1 m-1 items-center content-center">
+                <span id="currentTime">00:00</span>
+                <div id="seekbar">
+                    <div id="seek"></div>
+                </div>
+                <span id="totalTime">00:00</span>
+            </div>
+            <div class="flex gap-2 items-center w-full control">
+                <h4 id="nowPlaying" class="title">...</h4>
+                <div class="controls flex items-center content-center gap-2">
+                    <img src="./svgs/prev.svg" alt="prev" class="invert icon control-btn" id="prev">
+                    <img src="./svgs/play.svg" alt="play" class="invert icon control-btn" id="play">
+                    <img src="./svgs/next.svg" alt="next" class="invert icon control-btn" id="next">
+                </div>
+                <div class="vol flex items-center gap-1 content-center">
+                    <img src="./svgs/volume.svg" alt="volume" class="icon invert">
+                    <input type="range" name="volume" id="volume" class="volume" min="0" max="1" step="0.005"
+                        value="50%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

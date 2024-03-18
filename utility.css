@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --gap-1: 0.5rem;
+    --p-1: 0.8rem;
+    --playbar-h: 7rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+.bg-gray {
+    background: #121212;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.icon {
+    height: 25px;
+}
+
+.flex {
+    display: flex;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-around {
+    justify-content: space-around;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: var(--gap-1);
+}
+
+.gap-2 {
+    gap: calc(2 * var(--gap-1));
+}
+
+.m-1 {
+    margin: var(--gap-1);
+}
+
+.p-1 {
+    padding: var(--p-1);
+}
+
+.p-side-1 {
+    padding: 0 var(--p-1);
+}
+
+.p-2 {
+    padding: calc(2 * var(--p-1));
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.br-1 {
+    border-radius: 4px;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333;
+    /* Dark background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Lighter color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Darker color */
+}
