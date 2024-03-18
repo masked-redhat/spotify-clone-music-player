@@ -293,7 +293,7 @@ input[type="range"]::-webkit-slider-thumb {
     position: relative;
 }
 
-#createPlaylistForm img{
+#createPlaylistForm img {
     border-radius: 4px;
 }
 
@@ -303,7 +303,7 @@ h3 {
     margin-top: var(--p-1);
 }
 
-#createPlaylistForm>*{
+#createPlaylistForm>* {
     margin-right: 20px;
     margin-left: 20px;
 }
@@ -327,7 +327,7 @@ input[type='text'] {
     padding-left: 1px;
 }
 
-input[name='playlistDesc']{
+input[name='playlistDesc'] {
     padding-top: 4px;
     font-size: 0.9rem;
 }
@@ -347,13 +347,72 @@ input[type="checkbox"] {
     padding: var(--p-1);
     margin-top: 4px;
     background: #323232;
-    border-radius: 4px 4px 0 0 ;
+    border-radius: 4px 4px 0 0;
     text-transform: uppercase;
     position: sticky;
     bottom: 0;
     transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#createPlaylistForm button:hover{
+#createPlaylistForm button:hover {
     background-color: #222222;
+}
+
+#hamburger {
+    display: none;
+}
+
+#application>header>nav {
+    position: relative;
+}
+
+#close {
+    position: absolute;
+    display: none;
+    top: calc(2 * var(--p-1));
+    right: calc(2 * var(--p-1));
+}
+
+@media screen and (max-width:700px) {
+    #hamburger {
+        display: initial;
+    }
+
+    #close {
+        display: initial;
+    }
+
+    #application {
+        position: relative;
+    }
+
+    #application>header {
+        position: absolute;
+        background: black;
+        left: -100%;
+        width: 100%;
+        z-index: 3;
+    }
+
+    #nowPlayingImg {
+        display: none;
+    }
+
+    #nowPlaying {
+        width: 20%;
+    }
+
+    #volume {
+        width: 50%;
+    }
+
+    .controls{
+        gap: 0.1rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .card{
+        min-width: 95%;
+    }
 }

@@ -18,6 +18,7 @@
     <section id="application" class="flex h-full gap-1 m-1">
         <header class="aside flex column gap-1">
             <nav class="p-1 br-1 bg-gray flex column content-center gap-2">
+                <img src="./svgs/close.svg" alt="close" id="close" class="icon invert">
                 <img src="./svgs/logo.svg" alt="spotify" class="logo invert">
                 <ul class="flex column gap-1">
                     <li class="flex br-1 items-center gap-1 p-1"><img src="./svgs/home.svg" alt="home"
@@ -27,9 +28,9 @@
                 </ul>
             </nav>
             <aside class="p-2 h-full br-1 bg-gray">
-                <header class="flex gap-1 w-full items-center content-center">
+                <header class="flex gap-1 w-full items-center">
                     <img src="./svgs/library.svg" alt="playlist" class="icon invert">
-                    <h3 style="font-size: 0.98rem;margin: auto;">Your Library</h3>
+                    <h3 style="font-size: 0.98rem;margin-top: 2px;">Your Library</h3>
                     <button title="Create new Playlist"><img src="./svgs/plus.svg" alt="create playlist"
                             class="icon invert" id="createPlaylist"></button>
                 </header>
@@ -39,7 +40,8 @@
         </header>
         <section class="flex column w-full br-1 o-hidden bg-gray">
             <header class="mainHeader p-1 flex items-center">
-                <ul class="flex gap-2">
+                <ul class="flex gap-2 items-center">
+                    <li id="hamburger"><img src="./svgs/menu.svg" alt="menu" class="icon invert"></li>
                     <li class="p-1 br-1" id="allSongs">all songs</li>
                     <li class="p-1 br-1" id="playList">playlist</li>
                 </ul>

@@ -1,4 +1,4 @@
-const musicPath = './music/';
+const musicPath = '/music/';
 const track = new Audio();
 const mainElem = document.querySelector('main');
 const volm = document.getElementById('volume');
@@ -16,6 +16,8 @@ const allSongBtn = document.getElementById('allSongs');
 const playListBtn = document.getElementById('playList');
 const playlistAside = document.getElementById('songsPlaylist');
 const createNewPlaylist = document.getElementById('createPlaylist');
+const hamburger = document.getElementById('hamburger');
+const closeBtn = document.getElementById('close');
 let SONGSLOADED = null;
 let songs = [];
 let songsInAside = [];
@@ -465,7 +467,15 @@ track.addEventListener('ended', () => {
     nowPlayingImg.src = songs[currentIndex][3];
 })
 
+hamburger.onclick = () => {
+    document.querySelector('#application>header').style.left = '0';
+}
+closeBtn.onclick = () => {
+    document.querySelector('#application>header').style.left = '-100%';
+}
+
 createNewPlaylist.onclick = () => {
+    closeBtn.onclick();
     mainElem.textContent = '';
     mainElem.classList.remove('items-center');
     let form = createForm();
