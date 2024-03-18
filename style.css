@@ -1,6 +1,6 @@
 body {
     overflow: auto;
-    height: 100vh;
+    height: calc(100vh - var(--p-1) * 9);
     min-height: 420px;
     background: black;
 }
