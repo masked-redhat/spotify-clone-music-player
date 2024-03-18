@@ -1,9 +1,8 @@
 body {
-    overflow: hidden visible;
+    overflow: auto;
     height: 100vh;
     min-height: 420px;
     background: black;
-    overflow: hidden;
 }
 
 .logo {
@@ -395,7 +394,7 @@ input[type="checkbox"] {
         z-index: 3;
     }
 
-    #application>section{
+    #application>section {
         position: relative;
         margin-right: var(--gap-1);
         left: var(--gap-1);
@@ -413,13 +412,13 @@ input[type="checkbox"] {
         width: 50%;
     }
 
-    .controls{
+    .controls {
         gap: 0.1rem;
     }
 }
 
 @media screen and (max-width:450px) {
-    .card{
+    .card {
         min-width: 95%;
     }
 }
